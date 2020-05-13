@@ -28,5 +28,15 @@ public class AuthorController {
         return authorService.getAuthorsWithName(name);
     }
 
+    @PostMapping("new")
+    public Long createAuthor(@RequestBody Author author) {
+        return authorService.saveAuthor(author);
+    }
+
+    @PutMapping("update")
+    public Long updateAuthor(@RequestBody Author author) {
+        return authorService.updateAuthor(author);
+    }
+
 
 }

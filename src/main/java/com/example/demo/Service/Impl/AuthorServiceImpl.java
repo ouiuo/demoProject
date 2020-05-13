@@ -28,4 +28,17 @@ public class AuthorServiceImpl implements AuthorService {
         return authorRepository.findByNameContains(name);
     }
 
+    @Override
+    public Long saveAuthor(Author author) {
+        return authorRepository.save(author).getId();
+    }
+
+    @Override
+    public Long updateAuthor(Author author) {
+        if (authorRepository.existsById(author.getId())) {
+            authorRepository.save(author);
+        }
+        return null;
+    }
+
 }

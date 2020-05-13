@@ -16,7 +16,7 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     Optional<Author> findById(Long id);
 
     List<Author> findByNameContains(String name);
-//    @Query("SELECT * FROM authors WHERE name LIKE 1")
-//    List<Author> findByNameLike(String name);
+
+
 
 }

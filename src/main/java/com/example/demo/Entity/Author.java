@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity(name = "authors")
 public class Author {
     @Id
-    @GeneratedValue(generator = "authors_sequence")
+    @GeneratedValue(generator = "author_sequence")
     private long id;
     @Column
     private String name;
